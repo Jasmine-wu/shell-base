@@ -1,0 +1,9 @@
+#!/bin/bash
+# 批量修改文件名
+for file in `ls`;do
+    if [[ -f $file ]]; then
+      # 截掉最右边的test这部分
+      mv $file ${file#test}
+      ls
+    fi
+done
